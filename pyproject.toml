@@ -1,0 +1,21 @@
+[project]
+name = "bellingham-assistance-finder"
+version = "0.1.0"
+description = "Automation to ingest SAM.gov Assistance Listings and rank relevant programs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Bellingham Consulting LLC" }]
+dependencies = [
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+bafinder = "bellingham_assistance_finder.cli:main"
+
+[tool.setuptools.package-data]
+"bellingham_assistance_finder" = ["py.typed"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
